@@ -41,7 +41,6 @@ object ScalaIt {
     println("====== q1 ======")
     println(q1.get())
     println(q1.get())
-    println()
 
     val q2 = (new BasicIntQueue with Filtering with Incrementing)
     q2.put(-1)
@@ -51,6 +50,5 @@ object ScalaIt {
     println("====== q2 ======")
     println(q2.get())
     println(q2.get())
-    println()
   }
 }

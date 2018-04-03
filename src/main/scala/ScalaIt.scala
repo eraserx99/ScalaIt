@@ -31,24 +31,3 @@ trait Filtering extends IntQueue {
   abstract override def put(x: Int) = if ( x >= 0) super.put(x)
 }
 
-object ScalaIt {
-  def main(args: Array[String]): Unit = {
-    val q1 = (new BasicIntQueue with Incrementing with Filtering)
-    q1.put(-1)
-    q1.put(0)
-    q1.put(1)
-
-    println("====== q1 ======")
-    println(q1.get())
-    println(q1.get())
-
-    val q2 = (new BasicIntQueue with Filtering with Incrementing)
-    q2.put(-1)
-    q2.put(0)
-    q2.put(1)
-
-    println("====== q2 ======")
-    println(q2.get())
-    println(q2.get())
-  }
-}
